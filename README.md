@@ -18,11 +18,8 @@ NeuroPilot inference time: 299.53 ms
 Dataset: Food-11   
 Model  : ResNet18  
   
-Original data:  
-Top 1 Accuracy: 2346/3347 (70%)  
-Top 3 Accuracy: 2945/3347 (88%)  
-  
-Our method:  
-Top 1 Accuracy: 2302/3347 (69%)  
-Top 3 Accuracy: 2959/3347 (88%)  
+| Dataset  |  Top 1 Accuracy | Top 3 Accuracy |
+| ------------- |:-------------:|:-------------:|
+| Original data|  2346/3347 (70.09%)   |  2945/3347 (87.99%)|
+| Our method |  2302/3347 (68.78%)   | 2959/3347 (88.41%)|
    
