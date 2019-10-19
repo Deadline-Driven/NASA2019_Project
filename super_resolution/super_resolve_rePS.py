@@ -101,11 +101,10 @@ if opt.psnr_target is not None:
 
 print(input.shape)
 if opt.onnx_export is not None: # input images shape should be fixed value
-    #print(model)
-    #model = torch.nn.Sequential(*(list(model.children())[:-1]))
-    #for param in model.parameters():
-    #    print(param.data)
-    #for param_tensor in model.state_dict():
-    #    print(param_tensor, "\t", model.state_dict()[param_tensor].size())
-    #print(model)
+    print(model)
+    test_a = list(model.children())
+    test_b = [test_a[1], test_a[0], test_a[2], test_a[0], test_a[3], test_a[0], test_a[4]]
+    model = torch.nn.Sequential(*test_b)
+    print(test_b)
+    print(model)
     torch.onnx.export(model, input, opt.onnx_export, input_names = ['input'], output_names = ['output'])
