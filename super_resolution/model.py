@@ -12,7 +12,7 @@ class Net(nn.Module):
         self.conv2 = nn.Conv2d(64, 64, (3, 3), (1, 1), (1, 1))
         self.conv3 = nn.Conv2d(64, 32, (3, 3), (1, 1), (1, 1))
         self.conv4 = nn.Conv2d(32, upscale_factor ** 2, (3, 3), (1, 1), (1, 1))
-        self.convTranspose2 = nn.ConvTranspose2d(4, 1, kernel_size=(5,5), stride=upscale_factor, padding=2, output_padding=1)
+        self.convTranspose2 = nn.ConvTranspose2d(4, 1, kernel_size=(6,6), stride=upscale_factor, padding=2, output_padding=0)
 
         self._initialize_weights()
 
