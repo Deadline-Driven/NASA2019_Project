@@ -15,7 +15,7 @@ def onnx2kerasmodel(onnx_model_path, keras_model_dir):
     onnx_model = onnx.load(onnx_model_path)
     input_names = ['input']
     k_model = onnx_to_keras(onnx_model=onnx_model, input_names=input_names, 
-                            change_ordering=False, verbose=False)
+                            change_ordering=True, verbose=False)
     model_json = k_model.to_json()
     with open(keras_model_dir + "/model.json", 'w') as json_file:
         json_file.write(model_json)
@@ -70,9 +70,9 @@ def pytorch2savedmodel(onnx_model_path, saved_model_dir):
 def savedmodel2tflite(saved_model_dir, tflite_model_path, quantize=False):
     saved_model_dir = str(Path(saved_model_dir).joinpath('1'))
     converter = tf.lite.TFLiteConverter.from_saved_model(saved_model_dir)
-    converter.experimental_new_converter = True
     if quantize:
         converter.optimizations = [tf.lite.Optimize.OPTIMIZE_FOR_SIZE]
+
     tflite_model = converter.convert()
 
     with open(tflite_model_path, 'wb') as f:

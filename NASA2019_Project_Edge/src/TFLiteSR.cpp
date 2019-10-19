@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
     const char* output_path = "/data/local/tmp/result.bin";
 
     ANeuralNetworksTFLite *tflite = nullptr;
-    std::chrono::high_resolution_clock::time_point start_time;
+    std::chrono::high_resolution_clock::time_point start_time, end_time;
     std::chrono::duration<double> elapsed;
 
     do {
@@ -30,6 +30,8 @@ int main(int argc, char** argv) {
                     break;
                 }
         
+        ANeuroPilotTFLiteWrapper_setAllowFp16PrecisionForFp32(tflite, true);
+
         // Get input tensor
         TFLiteTensorExt inputTensor;
         if (ANeuroPilotTFLiteWrapper_getTensorByIndex(tflite,
@@ -72,6 +74,10 @@ int main(int argc, char** argv) {
             break;
         }
 
+        end_time = std::chrono::high_resolution_clock::now();
+
+        elapsed = std::chrono::duration_cast<std::chrono::duration<double>>(end_time - start_time);
+
         // Get output buffer
         TFLiteTensorExt outputTensor;
 
@@ -98,6 +104,11 @@ int main(int argc, char** argv) {
         cout << "Inference time : " << elapsed.count() * 1000 << " ms" << endl;
 
         std::ofstream output_fs(output_path);
+        
+        if (!output_fs.good()) {
+            cout << "Fail to read " << output_path;
+            break;
+        }
 
         output_fs.write((char*)outputTensor.buffer, outputTensor.bufferSize);
         output_fs.close();

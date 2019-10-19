@@ -8,9 +8,24 @@ parser.add_argument('--input_data', type=str, required=True, help='input data to
 parser.add_argument('--output_filename', type=str, required=True, help='where to save the output image')
 opt = parser.parse_args()
 
-img_out_y = np.load(opt.input_data)
-cv2_cb = np.load("tmp_cv2_cb.npy")
-cv2_cr = np.load("tmp_cv2_cr.npy")
+input_data = np.fromfile(opt.input_data,  dtype=np.float32).reshape(1,4,72,96)
+print(input_data.shape)
+img_out_y = np.zeros((1, 1, 144, 192))
+
+for i in range(144):
+    for j in range(192):
+        if i%2==0 and j%2==0:
+            img_out_y[0][0][i][j] = input_data[0][0][i//2][j//2]
+        if i%2==0 and j%2==1:
+            img_out_y[0][0][i][j] = input_data[0][1][i//2][(j-1)//2]
+        if i%2==1 and j%2==0:
+            img_out_y[0][0][i][j] = input_data[0][2][(i-1)//2][j//2]
+        if i%2==1 and j%2==1:
+            img_out_y[0][0][i][j] = input_data[0][3][(i-1)//2][(j-1)//2]
+
+
+cv2_cb = np.fromfile("tmp_cv2_cb.bin", dtype=np.uint8).reshape(72,96)
+cv2_cr = np.fromfile("tmp_cv2_cr.bin", dtype=np.uint8).reshape(72,96)
 
 
 cv2_out_img_y = np.uint8((img_out_y[0] * 255.0).clip(0, 255)[0])
