@@ -36,7 +36,7 @@
 ### Environment (Python)
   * PyTorch 1.2 docker container, e.g.
     ```
-    docker run -it  --gpus all  --name nasa_test -v /home/xxx/NASA2019_Project/Super_Resolution :/workspace pytorch/pytorch:1.2-cuda10.0-cudnn7-runtime /bin/bash
+    docker run -it  --gpus all  --name nasa_test -v /home/xxx/NASA2019_Project/Super_Resolution:/workspace pytorch/pytorch:1.2-cuda10.0-cudnn7-runtime /bin/bash
     ```
   * OpenCV installation (Python)
     ```
