@@ -13,6 +13,7 @@ make
 ```
 
 ## Experiment
+| Parameter    | Value    |
 |-----|-----|
 |Device| Oppo Reno Z|
 |SoC | Mediatek Helio P90 |
