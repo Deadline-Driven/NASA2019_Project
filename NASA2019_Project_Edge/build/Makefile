@@ -123,6 +123,46 @@ SR_visionrecovery/fast:
 	$(MAKE) -f CMakeFiles/SR_visionrecovery.dir/build.make CMakeFiles/SR_visionrecovery.dir/build
 .PHONY : SR_visionrecovery/fast
 
+#=============================================================================
+# Target rules for targets named RNN_dataimputation
+
+# Build rule for target.
+RNN_dataimputation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 RNN_dataimputation
+.PHONY : RNN_dataimputation
+
+# fast build rule for target.
+RNN_dataimputation/fast:
+	$(MAKE) -f CMakeFiles/RNN_dataimputation.dir/build.make CMakeFiles/RNN_dataimputation.dir/build
+.PHONY : RNN_dataimputation/fast
+
+src/TFLiteRNN.o: src/TFLiteRNN.cpp.o
+
+.PHONY : src/TFLiteRNN.o
+
+# target to build an object file
+src/TFLiteRNN.cpp.o:
+	$(MAKE) -f CMakeFiles/RNN_dataimputation.dir/build.make CMakeFiles/RNN_dataimputation.dir/src/TFLiteRNN.cpp.o
+.PHONY : src/TFLiteRNN.cpp.o
+
+src/TFLiteRNN.i: src/TFLiteRNN.cpp.i
+
+.PHONY : src/TFLiteRNN.i
+
+# target to preprocess a source file
+src/TFLiteRNN.cpp.i:
+	$(MAKE) -f CMakeFiles/RNN_dataimputation.dir/build.make CMakeFiles/RNN_dataimputation.dir/src/TFLiteRNN.cpp.i
+.PHONY : src/TFLiteRNN.cpp.i
+
+src/TFLiteRNN.s: src/TFLiteRNN.cpp.s
+
+.PHONY : src/TFLiteRNN.s
+
+# target to generate assembly for a file
+src/TFLiteRNN.cpp.s:
+	$(MAKE) -f CMakeFiles/RNN_dataimputation.dir/build.make CMakeFiles/RNN_dataimputation.dir/src/TFLiteRNN.cpp.s
+.PHONY : src/TFLiteRNN.cpp.s
+
 src/TFLiteSR.o: src/TFLiteSR.cpp.o
 
 .PHONY : src/TFLiteSR.o
@@ -157,8 +197,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... SR_visionrecovery"
 	@echo "... edit_cache"
+	@echo "... SR_visionrecovery"
+	@echo "... RNN_dataimputation"
+	@echo "... src/TFLiteRNN.o"
+	@echo "... src/TFLiteRNN.i"
+	@echo "... src/TFLiteRNN.s"
 	@echo "... src/TFLiteSR.o"
 	@echo "... src/TFLiteSR.i"
 	@echo "... src/TFLiteSR.s"

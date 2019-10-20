@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/TOSHIBA/NeuroPilot/NASA2019_Project/src/NeuroPilotTFLiteShim.h
+dlfcn.h
+-
+android/log.h
+-
+vector
+-
+
+/mnt/TOSHIBA/NeuroPilot/NASA2019_Project/src/TFLiteRNN.cpp
+chrono
+-
+iostream
+-
+fstream
+-
+math.h
+-
+cmath
+-
+android/NeuralNetworks.h
+-
+NeuroPilotTFLiteShim.h
+/mnt/TOSHIBA/NeuroPilot/NASA2019_Project/src/NeuroPilotTFLiteShim.h
+
