@@ -2,18 +2,6 @@
 The NeuroPilot data recovery solution project   
 https://2019.spaceappschallenge.org/challenges/planets-near-and-far/raiders-lost-data/teams/deadline-driven/project
    
-```js
-var routes = (
-  <Route name="NASA2019_Project">
-    <Route name="NASA2019_Project_Edge">
-    </Route>
-    <Route name="Super_Resolution">
-      <Route name="main.py"/>
-	  <Route name="compression.py"/>
-    </Route>
-  </Route>
-);
-```
    
 ### Image Denoise Performance     
    
