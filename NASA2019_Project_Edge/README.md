@@ -11,3 +11,10 @@ mkdir build
 cmake ../
 make
 ```
+
+## Experiment
+|-----|-----|
+|Device| Oppo Reno Z|
+|SoC | Mediatek Helio P90 |
+|Overall Executing Time | ~350ms|
+|On-device Executing Time| ~300ms|
