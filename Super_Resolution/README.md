@@ -66,7 +66,7 @@
 ### Environment (C++, ONNX Runtime and OpenCV)
   * docker image on AI-box (or [build the image by yourself](https://github.com/microsoft/onnxruntime/tree/master/tools/ci_build/github/linux/docker))
   ```
-  docker run --name nasa_onnx -u 0 -v /home/xxx/NASA2019_Project/Super_Resolution :/workspace -it onnxruntime_dev /bin/bash
+  docker run --name nasa_onnx -u 0 -v /home/xxx/NASA2019_Project/Super_Resolution:/workspace -it onnxruntime_dev /bin/bash
   cd /workspace
   ```
   * OpenCV installation (C++)
