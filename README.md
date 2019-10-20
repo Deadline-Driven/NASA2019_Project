@@ -6,15 +6,22 @@ https://2019.spaceappschallenge.org/challenges/planets-near-and-far/raiders-lost
 ```
 NASA2019_Project
 ├── NASA2019_Project_Edge
+│   │
+│   ├── CMakeLists.txt // Build cmake file
+│   │
 │   ├── build
-│   │   ├── 
-│   │   └── 
+│   │   ├── SR_visionrecovery
+│   │   └── RNN_dataimputation
 │   ├── res
-│   │   ├── 
-│   │   └── 
+│   │   ├── nasa_srmodel.tflite // Super Resolution model file
+│   │   └── nasa_rnnmodel.tflite // RNN model file
 │   └── src
-│       ├── 
-│       └── 
+│       ├── TFLiteSR.cpp // Super Resolution inference for NeuroPilot
+│       ├── TFLiteRNN.cpp // RNN inference for NeuroPilot
+│       └── utils
+│           ├── preprocess_img.py // Convert image in to pre-process data
+│           ├── postprocess_img.py // Recover data back to image
+│           └── converters.py // Convert ONNX to TFLite  
 └── Super_Resolution
     ├── main.py                 // Model training script
     ├── model.py                // Model architecture
