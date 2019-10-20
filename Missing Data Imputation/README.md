@@ -1,7 +1,7 @@
-# Super Resolution Model 
+# Data Imputation Model 
 ---
 
-## Overview (README.md is in progress.)
+## Overview 
 * NASA Curiosity rover sensor dataset
 
 * Missing data imputation source code (Keras):
