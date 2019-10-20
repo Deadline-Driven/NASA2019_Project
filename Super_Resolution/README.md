@@ -1,11 +1,6 @@
 # Super Resolution Model
 ---
 
-README for NASA2019_Project/Super_Resolution 
-===
-
-###### tags: `NCTU`
-
 ## Overview
 
 * NASA dataset compression source code (OpenCV, Python):
