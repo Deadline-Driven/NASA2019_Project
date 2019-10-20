@@ -16,16 +16,16 @@ NASA2019_Project
 │       ├── 
 │       └── 
 └── Super_Resolution
-    ├── main.py
-    ├── model.py
+    ├── main.py                 // Model training script
+    ├── model.py                // Model architecture
     ├── dataset.py
-    ├── compression.py
-    ├── super_resolve_rePS.py
-    ├── super_onnx_rePS.py
-    ├── super_onnx_batcheval.py
-    ├── psnr_function.py
-    ├── nasa_srmodel_rePS.onnx
-    └── model_epoch_200.pth
+    ├── compression.py          // Perform downsampling
+    ├── super_resolve_rePS.py   // Perform inference and output recovery image with PIL and PyTorch model
+    ├── super_onnx_rePS.py      // Perform inference and output recovery image with OpenCV and ONNX model
+    ├── super_onnx_batcheval.py // Evaluation on the test dataset
+    ├── psnr_function.py        // Evaluation algorithm
+    ├── nasa_srmodel_rePS.onnx  // ONNX model without pixel shuffle layer
+    └── model_epoch_200.pth     // PyTorch model without pixel shuffle layer 
 ```
    
 ### Image Denoise Performance     
