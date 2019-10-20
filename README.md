@@ -28,7 +28,7 @@ NASA2019_Project
     ├── dataset.py              // Data preprocessing
     ├── data.py                 // Data preprocessing
     ├── compression.py          // Perform downsampling
-    ├── super_resolve_rePS.py   // Perform inference and output recovery image with PIL and PyTorch model
+    ├── super_resolve_rePS.py   // Perform inference and export ONNX model with PIL and PyTorch model
     ├── super_onnx_rePS.py      // Perform inference and output recovery image with OpenCV and ONNX model
     ├── super_onnx_batcheval.py // Evaluation on the test dataset
     ├── psnr_function.py        // Evaluation algorithm
@@ -61,7 +61,7 @@ Model  : ResNet18
 ### Demonstration
 ![](https://i.imgur.com/L2xikBG.png)
 
-### Missing Data Imputation & MSE Loss Figure(Train & Test)
+### Missing Data Imputation
 ![](https://i.imgur.com/k1v5yLG.png)
 
 ### MSE Loss Figure(Train & Test)
