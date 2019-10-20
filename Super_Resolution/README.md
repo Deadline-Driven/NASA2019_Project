@@ -1,7 +1,7 @@
-# Super Resolution Model
+# Super Resolution Model 
 ---
 
-## Overview
+## Overview (In progress)
 
 * NASA dataset compression source code (OpenCV, Python):
   - `compression.py`
