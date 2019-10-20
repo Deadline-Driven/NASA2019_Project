@@ -12,7 +12,7 @@
   - `dataset.py`
   - `model.py`
   - `main.py`
-    - --upscale_factor **must be 2**, or you have to modify `data.py` by yourself (crop_size)
+    - --upscale_factor should be 2, or you had better to modify crop_size according to your dataset
     - --train_datapath and --train_ds_datapath should be a path to the folder which contains raw images and images generated from `compression.py` respectively
     - Raw image name: xxx.png
     - Resized image name: xxx_s.png
