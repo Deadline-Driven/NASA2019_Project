@@ -25,8 +25,6 @@ def target_transform(crop_size):
 
 
 def get_training_set(upscale_factor, train_folder, train_ds_folder):
-    #root_dir = download_bsd300()
-    #train_dir = join(root_dir, "train")
     crop_size = calculate_valid_crop_size(72, upscale_factor)
 
     return DatasetFromFolder(train_folder,
@@ -36,8 +34,6 @@ def get_training_set(upscale_factor, train_folder, train_ds_folder):
 
 
 def get_test_set(upscale_factor, test_folder, test_ds_folder):
-    #root_dir = download_bsd300()
-    #test_dir = join(root_dir, "test")
     crop_size = calculate_valid_crop_size(72, upscale_factor)
 
     return DatasetFromFolder(test_folder,
