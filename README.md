@@ -29,4 +29,4 @@ Model  : ResNet18
 ![](https://i.imgur.com/L2xikBG.png)
 
 ### Missing Data Imputation & MSE Loss Figure(Train & Test)
-[Imgur](https://imgur.com/vLXP3YO)
+![](https://i.imgur.com/0cZK5qV.png)
