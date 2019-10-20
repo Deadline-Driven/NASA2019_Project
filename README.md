@@ -25,4 +25,4 @@ Model  : ResNet18
 | Our method |  2302/3347 (68.78%)   | 2959/3347 (88.41%)|
    
 ### Demonstration
-https://i.imgur.com/L2xikBG.png
+![](https://i.imgur.com/L2xikBG.png)
