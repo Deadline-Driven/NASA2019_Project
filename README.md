@@ -10,11 +10,11 @@ NASA2019_Project
 │   ├── CMakeLists.txt // Build cmake file
 │   │
 │   ├── build
-│   │   ├── SR_visionrecovery
-│   │   └── RNN_dataimputation
+│   │   ├── SR_visionrecovery // For Super Resoultion
+│   │   └── RNN_dataimputation // For RNN
 │   ├── res
 │   │   ├── nasa_srmodel.tflite // Super Resolution model file
-│   │   └── nasa_rnnmodel.tflite // RNN model file
+│   │   └── nasa_rnnmodel.tflite // RNN model file(original keras model error, not exist yet...)
 │   └── src
 │       ├── TFLiteSR.cpp // Super Resolution inference for NeuroPilot
 │       ├── TFLiteRNN.cpp // RNN inference for NeuroPilot

@@ -22,12 +22,14 @@ def onnx2kerasmodel(onnx_model_path, keras_model_dir):
     k_model.save_weights(keras_model_dir + "/model.h5")
     print("Model Saved!")
     
-def kerasmodel2tflite(keras_model_dir, tflite_model_path, quantize=False):
-    json_file = open(keras_model_dir + "/model.json", 'r')
+def keras2tflite(keras_model_dir, tflite_model_path, quantize=False):
+    network_define = keras_model_dir.joinpath("model_config.json")
+    network_weight = keras_model_dir.joinpath("weights.h5")
+    json_file = open(network_define, 'r')
     loaded_model_json = json_file.read()
     json_file.close()
     loaded_model = model_from_json(loaded_model_json)
-    loaded_model.load_weights(keras_model_dir + "/model.h5")
+    loaded_model.load_weights(network_weight)
     print("Model Recovered!")
     converter = tf.compat.v2.lite.TFLiteConverter.from_keras_model(loaded_model)
     tflite_model = converter.convert()

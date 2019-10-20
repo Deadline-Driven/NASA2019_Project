@@ -18,3 +18,7 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
 ADD_EXECUTABLE(SR_visionrecovery src/TFLiteSR.cpp)
 TARGET_LINK_LIBRARIES(SR_visionrecovery log)
 TARGET_LINK_LIBRARIES(SR_visionrecovery neuralnetworks)
+
+ADD_EXECUTABLE(RNN_dataimputation src/TFLiteRNN.cpp)
+TARGET_LINK_LIBRARIES(RNN_dataimputation log)
+TARGET_LINK_LIBRARIES(RNN_dataimputation neuralnetworks)
