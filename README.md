@@ -2,6 +2,28 @@
 The NeuroPilot data recovery solution project   
 https://2019.spaceappschallenge.org/challenges/planets-near-and-far/raiders-lost-data/teams/deadline-driven/project
    
+NASA2019_Project
+├── NASA2019_Project_Edge
+│   ├── build
+│   │   ├── 
+│   │   └── 
+│   ├── res
+│   │   ├── 
+│   │   └── 
+│   └── src
+│       ├── 
+│       └── 
+└── Super_Resolution
+    ├── main.py
+    ├── model.py
+    ├── dataset.py
+    ├── compression.py
+    ├── super_resolve_rePS.py
+    ├── super_onnx_rePS.py
+    ├── super_onnx_batcheval.py
+    ├── psnr_function.py
+    ├── nasa_srmodel_rePS.onnx
+    └── model_epoch_200.pth
    
 ### Image Denoise Performance     
    
