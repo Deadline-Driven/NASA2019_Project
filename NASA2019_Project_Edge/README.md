@@ -7,12 +7,17 @@ build/tools/make-standalone-toolchain.sh --arch=arm64 --platform=android-28 --in
 
 # Build Instruction
 ```
-mkdir build
-cmake ../
-make
+$ mkdir build
+$ cmake ../
+$ make
+```
+# Usage
+```
+Connect your NeuroPilot device, and make sure you have adb permission
+$ ./execute_process <path of converted file> 
 ```
 
-## Experiment
+# Experiment
 | Parameter    | Value    |
 |-----|-----|
 |Device| Oppo Reno Z|
