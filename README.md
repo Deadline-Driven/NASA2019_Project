@@ -18,7 +18,8 @@ NASA2019_Project
 └── Super_Resolution
     ├── main.py                 // Model training script
     ├── model.py                // Model architecture
-    ├── dataset.py
+    ├── dataset.py              // Data preprocessing
+    ├── data.py                 // Data preprocessing
     ├── compression.py          // Perform downsampling
     ├── super_resolve_rePS.py   // Perform inference and output recovery image with PIL and PyTorch model
     ├── super_onnx_rePS.py      // Perform inference and output recovery image with OpenCV and ONNX model
